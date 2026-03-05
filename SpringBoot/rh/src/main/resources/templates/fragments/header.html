@@ -1,0 +1,20 @@
+<!-- cabeçalho para todas as páginas do site -->
+<header th:fragment="header">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a th:href="@{/}">Home</a>
+                </li>
+                <li>
+                    <a th:href="@{/funcionario}">Cadastro Funcionario</a>
+                </li>
+                <li>
+                    <a th:href="@{/listar}">Listar Funcionário</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+</header>

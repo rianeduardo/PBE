@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-RhApplication<rh>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.rh.RhApplication",
+            "projectName": "rh",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

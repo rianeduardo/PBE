@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    min-height: 100vh;
+}
+
+nav {
+    background-color: #333;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    border-bottom: solid 2px #bbbbbb;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+li {
+    display: inline;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff6347;
+}
+
+main {
+    padding: 50px;
+    text-align: left;
+}
+
+span {
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #4e4e4e;
+}
+
+h1 {
+    color: #333;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+}
+
+label {
+    font-size: 16px;
+    color: #4e4e4e;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(63, 63, 63, 0.5);
+}
+
+button {
+    padding: 10px;
+    background-color: #65ff79;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3bf068;
+    box-shadow: 0 0 5px rgb(114, 255, 114);
+}

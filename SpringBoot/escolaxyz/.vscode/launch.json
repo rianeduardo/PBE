@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-EscolaxyzApplication<escolaxyz>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "dev.rianeduardo.escolaxyz.escolaxyz.EscolaxyzApplication",
+            "projectName": "escolaxyz",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

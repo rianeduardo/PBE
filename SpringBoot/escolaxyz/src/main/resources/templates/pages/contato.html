@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="PT-br" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola XYZ | Contato</title>
+    <div th:insert="~{fragments/style}"></div>
+</head>
+
+<body>
+    <div th:insert="~{fragments/header :: header}"></div>
+    <div class="container">
+        <h1>CONTATO</h1>
+        <p><em>Entre em contato conosco através dos canais abaixo (Atendimento 24h):</em></p>
+        <ul>
+            <li><strong>Telefone:</strong> (11) 1234-5678</li>
+            <li><strong>Email:</strong> contato@escolaxyz.com</li>
+            <li><strong>Endereço:</strong> Rua das Flores, 123 - São Paulo, SP</li>
+        </ul>
+    </div>
+    <div th:insert="~{fragments/footer :: footer}"></div>
+</body>
+
+</html>

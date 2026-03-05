@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    min-height: 100vh;
+}
+
+nav {
+    background-color: #333;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    border-bottom: solid 2px #bbbbbb;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+li {
+    display: inline;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff6347;
+}
+
+.container {
+    padding: 50px;
+    text-align: left;
+}
+
+span {
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #4e4e4e;
+}
+
+h1 {
+    color: #333;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+}
+
+label {
+    font-size: 16px;
+    color: #4e4e4e;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(63, 63, 63, 0.5);
+}
+
+button {
+    padding: 10px;
+    background-color: #65ff79;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3bf068;
+    box-shadow: 0 0 5px rgb(114, 255, 114);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+td {
+    animation: forwards slide 0.5s ease;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-danger {
+    background-color: #ff5e5e;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    width: 200px;
+}
+
+.btn-edit {
+    background-color: #4e9cff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    width: 200px;
+}
+
+.btn-danger:hover {
+    background-color: #ff3b3b;
+    box-shadow: 0 0 5px rgb(255, 94, 94);
+}
+
+.btn-edit:hover {
+    background-color: #1e7cff;
+    box-shadow: 0 0 5px rgb(78, 156, 255);
+}
+
+.wrap_btn {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-td {
+    display: flex;
+    gap: 10px;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://thymeleaf.org/">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola XYZ | Home</title>
+    <div th:insert="~{fragments/style}"></div>
+</head>
+
+<body>
+    <div th:insert="~{fragments/header :: header}"></div>
+    <div class="container">
+        <h1>Bem-vindo à Escola XYZ</h1>
+        <p><em>Educação de qualidade para um futuro brilhante!</em></p>
+        <p>A Escola XYZ é uma instituição de ensino comprometida com a excelência acadêmica e o desenvolvimento integral
+            dos alunos. Oferecemos uma ampla variedade de cursos e atividades extracurriculares para garantir que nossos
+            estudantes tenham uma experiência educacional enriquecedora e completa.</p>
+        <p>Nosso corpo docente é altamente qualificado e dedicado a proporcionar um ambiente de aprendizado estimulante
+            e acolhedor. Na Escola XYZ, valorizamos a diversidade, o respeito e a colaboração, preparando nossos alunos
+            para se tornarem cidadãos conscientes e responsáveis.</p>
+        <p>Explore nosso site para conhecer mais sobre nossos cursos, eventos e a comunidade escolar. Junte-se a nós
+            e faça parte da família Escola XYZ!</p>
+
+        <a th:href="@{login-adm}" class="btn btn-primary">Login Admin</a>
+        <a th:href="@{login-aluno}" class="btn btn-secondary">Login Aluno</a>
+        <a th:href="@{login-professor}" class="btn btn-success">Login Professor</a>
+    </div>
+
+    <div th:insert="~{fragments/footer :: footer}"></div>
+</body>
+
+<script th:src="@{js/script.js}"></script>
+
+</html>

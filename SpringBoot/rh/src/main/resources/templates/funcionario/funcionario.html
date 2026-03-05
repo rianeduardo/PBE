@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Funcionários</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <!-- estilos globais carregados pelo fragmento de cabeçalho -->
+</head>
+
+<body>
+    <div th:insert="~{fragments/header :: header}"><!-- barra de menu --></div>
+    <div class="container">
+        <!-- navBar -->
+        <h1>Cadastro de Funcionários</h1>
+        <form method="post">
+            <div class="form-group">
+                <label for="">Nome:</label>
+                <br>
+                <input type="text" name="nome" id="nome">
+                <br>
+                <label for="">Email:</label>
+                <input type="email" name="email" id="email">
+                <br>
+                <label for="">Salário: </label>
+                <input type="number" name="salario" id="salario" step="any">
+            </div>
+            <button type="submit" class="btn btn-primary">ENVIAR</button>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

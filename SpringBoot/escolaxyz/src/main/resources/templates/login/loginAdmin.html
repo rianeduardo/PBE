@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://thymeleaf.org/">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola XYZ | Cadastro ADM</title>
+    <div th:insert="~{fragments/style}"></div>
+    <link rel="stylesheet" th:href="@{css/style-cadastro.css}">
+    <style>
+        .classe {
+            padding: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .verde {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #45ff70;
+            border-radius: 8px;
+            border: solid 5px #00b129;
+        }
+
+        .vermelho {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ff3f52;
+            border-radius: 8px;
+            border: solid 5px #e02525;
+        }
+
+        .cardcadastro {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .btn-login {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .btn-login:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        .cadastrarOption {
+            display: block;
+            margin-top: 15px;
+            text-align: center;
+            color: #007bff;
+        }
+
+        .wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .line {
+            flex: 1;
+            height: 1px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div th:insert="~{fragments/header :: header}"></div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="register-container">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Login</h3>
+                        </div>
+                        <div class="card-body">
+                            <form method="post" action="acesso-adm" class="cardcadastro">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="CPF" name="cpf">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Senha" name="senha">
+                                </div>
+                                <button type="submit" class="btn btn-block btn-login"><i
+                                        class="fas fa-sign-in-alt me-2"></i>Entrar</button>
+                            </form>
+
+                            <div class="wrapper">
+                                <div class="line"></div>
+                                <span>ou</span>
+                                <div class="line"></div>
+                            </div>
+
+                            <a th:href="@{/cadastro-adm}" class="cadastrarOption">Cadastrar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div th:if="${msg}" th:text="${msg}" th:class="${classe}"></div>
+
+    <div th:insert="~{fragments/footer :: footer}"></div>
+</body>
+
+</html>

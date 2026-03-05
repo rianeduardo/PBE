@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-br" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="@{/css/style.css}">
+    <title>Listar Funcionário</title>
+</head>
+
+<body>
+    <div th:insert="~{fragments/header :: header}"><!-- barra de menu --></div>
+    <div class="container">
+        <!-- navbar -->
+
+        <h1>Listar Funcionários</h1>
+        <table class="table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Nome:</th>
+                    <th scope="col">E-mail:</th>
+                    <th scope="col">Salário:</th>
+                    <th scope="col">Ações:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- listar o funcionario da lista de funcinários -->
+                <tr th:each="funcionario : ${funcionarios}">
+                    <td><span th:text="${funcionario.nome}"></span></td>
+                    <td><span th:text="${funcionario.email}"></span></td>
+                    <td><span th:text="'R$ ' + ${funcionario.salario}"></span></td>
+                    <div class="wrap_btn">
+                        <td class="btn-td"><a th:href="@{'/deletarfuncionario/'+${funcionario.id}}"
+                                class="waves-effect waves-light btn-small">
+                                <button type="button" class="btn btn-danger">Excluir</button></a>
+                            <a th:href="@{'/editarfuncionario/'+${funcionario.id}}"
+                                class="waves-effect waves-light btn-small">
+                                <button type="button" class="btn btn-edit">Editar</button></a>
+                        </td>
+                    </div>
+                </tr>
+            </tbody>
+        </table>
+
+</html>
