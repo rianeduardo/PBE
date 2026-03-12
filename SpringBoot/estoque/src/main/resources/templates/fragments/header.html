@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<header class="senai-header" th:fragment="header">
+    <div class="senai-shell">
+        <a class="senai-brand" th:href="@{/}">
+            <img class="senai-logo" th:src="@{/img/logo-senai.png}" alt="SENAI-SP" />
+            <span class="senai-brand-text">Sistema de Estoque e Patrimônio</span>
+        </a>
+
+        <nav class="senai-nav" aria-label="Navegação principal">
+            <th:block th:if="${session.usuarioLogado == null or !session.usuarioLogado}">
+                <a class="senai-link" th:href="@{/cadastro}">Cadastro</a>
+                <a class="senai-button" th:href="@{/login}">Login</a>
+            </th:block>
+
+            <th:block th:if="${session.usuarioLogado != null and session.usuarioLogado}">
+                <a class="senai-link" th:href="@{/dashboard}">Dashboard</a>
+                <a class="senai-link" th:href="@{/app/materiais}">Materiais</a>
+                <a class="senai-link" th:href="@{/app/ativos}">Ativos Patrimoniais</a>
+                <a class="senai-link" th:href="@{/app/movimentacoes/nova}">Registrar Movimentação</a>
+
+                <a class="senai-button" style="background: var(--senai-gray-900);" th:href="@{/logout}">Sair</a>
+            </th:block>
+        </nav>
+    </div>
+</header>
+
+</html>

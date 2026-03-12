@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Dashboard | Sistema de Estoque e Patrimônio</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+
+<body>
+	<div th:replace="~{fragments/header :: header}"></div>
+
+	<main class="senai-main">
+		<section style="padding: 20px 0;">
+			<div class="senai-shell" style="display: block;">
+
+				<div class="senai-card" style="margin-bottom: 24px;">
+					<h1 class="senai-title" style="font-size: 24px;">Visão Geral do Sistema</h1>
+					<p class="senai-subtitle" style="margin-top: 8px;">
+						Bem-vindo ao painel de controle.
+						<span th:if="${nif}">Você está logado com o NIF: <strong><span
+									th:text="${nif}"></span></strong>.</span>
+					</p>
+				</div>
+
+				<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+
+					<div class="senai-card" style="display: flex; flex-direction: column;">
+						<h2 style="margin: 0 0 10px 0; font-size: 18px; color: var(--senai-red);">Materiais e Estoque
+						</h2>
+						<p style="color: #4B5563; font-size: 14px; margin-bottom: 20px; flex-grow: 1;">
+							Cadastre novos materiais, consulte o saldo atual e edite os itens.
+						</p>
+						<a class="senai-button" th:href="@{/app/materiais}" style="text-align: center;">Acessar
+							Materiais</a>
+					</div>
+
+					<div class="senai-card" style="display: flex; flex-direction: column;">
+						<h2 style="margin: 0 0 10px 0; font-size: 18px; color: var(--senai-red);">Categorias</h2>
+						<p style="color: #4B5563; font-size: 14px; margin-bottom: 20px; flex-grow: 1;">
+							Gerencie as categorias para organizar os materiais do estoque.
+						</p>
+						<a class="senai-button" th:href="@{/app/categorias}" style="text-align: center;">Acessar
+							Categorias</a>
+					</div>
+
+					<div class="senai-card" style="display: flex; flex-direction: column;">
+						<h2 style="margin: 0 0 10px 0; font-size: 18px; color: var(--senai-red);">Ativos Patrimoniais
+						</h2>
+						<p style="color: #4B5563; font-size: 14px; margin-bottom: 20px; flex-grow: 1;">
+							Controle os equipamentos, máquinas e bens permanentes da escola.
+						</p>
+						<a class="senai-button" th:href="@{/app/ativos}" style="text-align: center;">Acessar
+							Patrimônio</a>
+					</div>
+
+					<div class="senai-card" style="display: flex; flex-direction: column;">
+						<h2 style="margin: 0 0 10px 0; font-size: 18px; color: var(--senai-red);">Movimentações</h2>
+						<p style="color: #4B5563; font-size: 14px; margin-bottom: 20px; flex-grow: 1;">
+							Registre as entradas e saídas de materiais de consumo e veja o histórico.
+						</p>
+						<a class="senai-button" th:href="@{/app/movimentacoes}" style="text-align: center;">Acessar
+							Histórico</a>
+					</div>
+
+					<div class="senai-card" style="display: flex; flex-direction: column;">
+						<h2 style="margin: 0 0 10px 0; font-size: 18px; color: #856404;">⚠️ Alertas de Estoque</h2>
+						<p style="color: #4B5563; font-size: 14px; margin-bottom: 20px; flex-grow: 1;">
+							Visualize rapidamente os materiais que estão com saldo baixo ou zerado.
+						</p>
+						<a class="senai-button" th:href="@{/app/materiais/alertas}"
+							style="text-align: center; background-color: #ffc107; color: #856404; border: none;">Ver
+							Alertas</a>
+					</div>
+
+					<div class="senai-card" style="display: flex; flex-direction: column;">
+						<h2 style="margin: 0 0 10px 0; font-size: 18px; color: var(--senai-red);">Minha Sessão</h2>
+						<p style="color: #4B5563; font-size: 14px; margin-bottom: 20px; flex-grow: 1;">
+							Encerre sua sessão de forma segura após o término do seu trabalho.
+						</p>
+						<a class="senai-button" th:href="@{/logout}"
+							style="text-align: center; background-color: var(--senai-gray-900);">Sair do Sistema</a>
+					</div>
+
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+
+</html>
